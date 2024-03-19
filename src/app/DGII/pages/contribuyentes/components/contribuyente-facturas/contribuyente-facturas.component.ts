@@ -1,7 +1,9 @@
 import { CSP_NONCE, Component, Input, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { ContribuyenteFacturasDto, MontoTotalItbis } from '../../interfaces/IContribuyente';
+
 import { computeMsgId } from '@angular/compiler';
+import { ContribuyenteFacturas } from '../../interfaces/IContribuyeteFacturas';
+import { MontoTotalItbis } from '../../interfaces/MontoTotalItbis';
 
 export interface PeriodicElement {
   name: string;
@@ -28,7 +30,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./contribuyente-facturas.component.css']
 })
 export class ContribuyenteFacturasComponent implements OnInit{
-  @Input() contribuyentesFacturas : ContribuyenteFacturasDto[] = []
+  @Input() contribuyentesFacturas : ContribuyenteFacturas[] = []
   @Input() contribuyenteMontoAPagarITBIS! : MontoTotalItbis;
 
   ngOnInit(): void {

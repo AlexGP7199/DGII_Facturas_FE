@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { ContribuyenteResponseDto } from '../../interfaces/IContribuyente';
+import { ContribuyenteResponse } from '../../interfaces/IContribuyenteResponse';
 
 export interface PeriodicElement {
   name: string;
@@ -32,7 +32,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 
 export class ContribuyenteTableComponent {
-  @Input() contribuyentes : ContribuyenteResponseDto[] = []
+  @Input() contribuyentes : ContribuyenteResponse[] = []
   @Output() contribuyenteId  = new EventEmitter<number>();
 
   displayedColumns: string[] = ['rncCedula', 'nombre', 'tipo_Contribuyente', 'estatus_Contribuyente', 'acciones'];

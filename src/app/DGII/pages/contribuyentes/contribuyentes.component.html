@@ -8,6 +8,16 @@
     <div class="page">
       <div class="page__box">Contribuyentes</div>
       <div class="page__content">
+        <div>
+          <h3>Pagina {{pageNumber}} de {{paginasRestantes}}</h3>
+          <h3> Total de Registros:{{this.cantidadRegistros}}</h3>
+          <div>
+            <button mat-raised-button color="primary" (click)="prevPage()">Pagina anterior</button>
+            <button mat-raised-button color="primary" (click)="nextPage()">Siguiente Pagina</button>
+          </div>
+
+        </div>
+
         <!-- <h1>Pagina: algo / algo </h1> -->
         <app-contribuyente-table [contribuyentes]="this.contribuyenteData" (contribuyenteId)="getContribuyenteId($event)"></app-contribuyente-table>
 

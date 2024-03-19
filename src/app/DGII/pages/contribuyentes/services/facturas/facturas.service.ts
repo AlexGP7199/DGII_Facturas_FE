@@ -2,31 +2,22 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { apiUrl } from 'src/app/environments/apiUrl';
-import { ContribuyenteResponseDto } from '../interfaces/IContribuyente';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ContribuyentesService {
-
+export class FacturasService {
 
   constructor(private http : HttpClient) { }
 
-  getAllContribuyentes():Observable<any>{
+  getCantidadFacturasByContribuyenteId(ContribuyenteId : number):Observable<any>{
     return this.http.get<any>(
-      apiUrl + "Contribuyente/ObtenerContribuyentes"
+      apiUrl + "Factura/ObtenerCantidadFacturasByContribuyenteId?contribuyenteId="+ContribuyenteId
     )
   }
-
-  getContribuyenteById(id : number):Observable<any>{
+  getAllFacturasByContribuyenteId(ContribuyenteId : number, pageNumber : number, pageSize : number):Observable<any>{
     return this.http.get<any>(
-      apiUrl + "Contribuyente/ObtenerContribuyenePorId?id=" + id
-    )
-  }
-
-  getAllFacturasByContribuyenteId(ContribuyenteId : number):Observable<any>{
-    return this.http.get<any>(
-      apiUrl + "Factura/ObtenerTodasLasFacturasByContribyenteId?id="+ContribuyenteId
+      apiUrl + "Factura/ObtenerTodasLasFacturasByContribyenteId?id="+ContribuyenteId+"&pageNumber="+pageNumber+"&pageSize="+pageSize
     )
   }
 

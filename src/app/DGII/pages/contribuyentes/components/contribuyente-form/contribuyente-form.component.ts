@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ContribuyenteResponseDto } from '../../interfaces/IContribuyente';
+import { ContribuyenteResponse } from '../../interfaces/IContribuyenteResponse';
 
 @Component({
   selector: 'app-contribuyente-form',
@@ -7,7 +7,7 @@ import { ContribuyenteResponseDto } from '../../interfaces/IContribuyente';
   styleUrls: ['./contribuyente-form.component.css']
 })
 export class ContribuyenteFormComponent{
-@Input() contribuyenteInfo! : ContribuyenteResponseDto
+@Input() contribuyenteInfo! : ContribuyenteResponse
 
 
 constructor() {
