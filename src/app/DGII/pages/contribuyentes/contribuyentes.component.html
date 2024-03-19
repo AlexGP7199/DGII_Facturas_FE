@@ -1,0 +1,44 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <app-side-nav>
+    </app-side-nav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-header class="headerZ"(toggleSidebarForMe)="sideBarToggler()"></app-header>
+    <div class="page">
+      <div class="page__box">Contribuyentes</div>
+      <div class="page__content">
+        <h1>Pagina: algo / algo </h1>
+        <app-contribuyente-table [contribuyentes]="this.contribuyenteData" (contribuyenteId)="getContribuyenteId($event)"></app-contribuyente-table>
+        <!--
+        <div class="container" style="display: flex; flex-wrap: wrap-reverse">
+
+          <div class="row mt-3">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mt-3" *ngFor="let pokemon of pokemonList; let i = index">
+               <app-pokemon-fav-card (favPokemonUpdate)="updateFavPoke($event)" (favPokemonDelete)="deleteFavPoke($event)" [pokemon]="pokemon"></app-pokemon-fav-card>
+              <div *ngIf="(i + 1) % 4 === 0" class="w-100 d-none d-md-block">
+                <p></p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>-->
+        <div class="botones-flotantes">
+          <button mat-fab color="warn" (click)="prevPage()">
+            <mat-icon>fast_rewind</mat-icon>
+          </button>
+          <button mat-fab color="warn" (click)="nextPage()">
+            <mat-icon>fast_forward</mat-icon>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+
+  </mat-drawer-content>
+</mat-drawer-container>
+
+
+

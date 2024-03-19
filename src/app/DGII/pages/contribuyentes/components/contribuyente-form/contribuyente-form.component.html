@@ -1,0 +1,28 @@
+
+
+<div *ngIf="this.contribuyenteInfo">
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>RNC Cedula</mat-label>
+    <input matInput [(ngModel)]="this.contribuyenteInfo.rncCedula" name="rncCedula" disabled>
+  </mat-form-field>
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Nombre</mat-label>
+      <input matInput [(ngModel)]="this.contribuyenteInfo.nombre" name="nombre" disabled>
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Tipo de Contribuyente</mat-label>
+      <input matInput [(ngModel)]="this.contribuyenteInfo.tipo_Contribuyente" name="tipo_Contribuyente" disabled>
+    </mat-form-field></td>
+  </tr></table>
+  <p>
+    <mat-form-field class="example-full-width">
+      <mat-label>Estao de Contribuyente</mat-label>
+      <textarea matInput [(ngModel)]="this.contribuyenteInfo.estatus_Contribuyente" name="estatus_Contribuyente" disabled></textarea>
+    </mat-form-field>
+  </p>
+
+
+</form>
+</div>
