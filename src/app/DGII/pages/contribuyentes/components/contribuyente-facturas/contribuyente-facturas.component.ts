@@ -32,7 +32,7 @@ export class ContribuyenteFacturasComponent implements OnInit{
   @Input() contribuyenteMontoAPagarITBIS! : MontoTotalItbis;
 
   ngOnInit(): void {
-      console.log(this.contribuyentesFacturas);
+      //console.log(this.contribuyentesFacturas);
   }
   displayedColumns: string[] = ['ncf', 'monto', 'itbis18'];
   dataSource = new MatTableDataSource(this.contribuyentesFacturas);

@@ -75,7 +75,8 @@ import { RouterModule } from '@angular/router';
     HeaderComponent,
     SideNavComponent,
     MatTableModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ]
 })
 export class SharedModule { }

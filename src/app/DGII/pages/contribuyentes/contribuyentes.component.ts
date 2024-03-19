@@ -21,15 +21,14 @@ export class ContribuyentesComponent implements OnInit {
   ngOnInit(): void {
       this.contribuyenteService.getAllContribuyentes().subscribe({
         next : (res) => {
-          //console.log(res.data);
           this.contribuyenteData = res.data;
-          //console.log(this.contribuyenteData)
+
         }
       })
   }
 
   getContribuyenteId(id : number){
-    console.log("llego algo", id)
+
       this.router.navigate(['Detalle',id], { relativeTo: this.route });
   }
 

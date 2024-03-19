@@ -6,11 +6,11 @@ import { ContribuyenteDetailComponent } from './pages/contribuyentes/pages/contr
 
 const routes: Routes = [
   {path: '', redirectTo: 'Contribuyentes', pathMatch: 'full'},
-  {path: 'Contribuyentes', component: ContribuyentesComponent,
-                            children : [
-                              {path: 'Detalle/:id', component : ContribuyenteDetailComponent}
-                           ]},
-  //{path: 'Contribuyentes/Detalle/:id', component : ContribuyenteDetailComponent}
+  {path: 'Contribuyentes', component: ContribuyentesComponent},
+                            //children : [
+                              //{path: 'Detalle/:id', component : ContribuyenteDetailComponent}
+                           // ]},
+  {path: 'Contribuyentes/Detalle/:id', component : ContribuyenteDetailComponent}
 ];
 
 @NgModule({

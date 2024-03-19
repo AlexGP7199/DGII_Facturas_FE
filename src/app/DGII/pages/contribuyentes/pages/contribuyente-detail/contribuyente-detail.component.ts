@@ -20,18 +20,16 @@ export class ContribuyenteDetailComponent implements OnInit {
   ngOnInit(): void {
       this.route.params.subscribe(param => {
         this.id = param['id'];
-        console.log(this.id);
+        
         this.contribuyenteService.getContribuyenteById(this.id).subscribe({
           next : (res) => {
             this.contribuyenteInfo = res.data;
-            console.log("guardo");
-            console.log(this.contribuyenteInfo);
+
             this.contribuyenteService.getAllFacturasByContribuyenteId(this.id).subscribe({
               next : (res) => {
-                console.log(res);
-                console.log("facturas")
+
                 this.facturasContribuyentes = res.data;
-                console.log(this.facturasContribuyentes);
+
                 this.contribuyenteService.getMontoTotalITBIS(this.id).subscribe({
                   next : (res) => {
                       this.montoTotalITBIS = res.data;
